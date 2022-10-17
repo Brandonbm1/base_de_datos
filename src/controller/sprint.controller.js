@@ -20,7 +20,7 @@ const crearSprint = async () => {
       idProyecto,
       idEmpleadoCargo,
     };
-    const [result] = await createSprint(newSprint);
+    const result = await createSprint(newSprint);
     return result;
   } catch (error) {
     return error;
@@ -28,7 +28,7 @@ const crearSprint = async () => {
 };
 
 export const verSprints = async (_req, res) => {
-  const [result] = await getSprints();
+  const result = await getSprints();
   res.json(result);
 };
 
@@ -44,6 +44,6 @@ export const controladorCreadorSprint = async (req, res) => {
       sprintsCreados.push(sprint);
     }
   }
-
+  console.log(sprintsCreados);
   res.json(sprintsCreados);
 };

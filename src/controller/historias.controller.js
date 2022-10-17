@@ -28,6 +28,7 @@ export const crearHistoria = async () => {
     };
     helpers.agregarHistoriaASprint(idSprint);
     const savedHistoria = await createHistoria(newHistoria);
+    console.log(savedHistoria);
     return savedHistoria;
   } catch (error) {
     console.error(error);
