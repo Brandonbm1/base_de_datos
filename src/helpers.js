@@ -31,6 +31,15 @@ export const obtenerNumeroAleatorio = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1) + min);
 };
 
+const cantNombres = nombres.length - 1;
+const cantApellidos = apellidos.length - 1;
+const cantRoles = roles.length - 1;
+const cantTiposContratos = tiposContratos.length - 1;
+const cantNivelesAcademicos = nivelesAcademicos.length - 1;
+const cantDependencias = dependencias.length - 1;
+const cantCiudades = ciudades.length - 1;
+const cantNombresProyectos = nombreProyectos.length - 1;
+
 export const obtenerCorreo = (
   primerNombre,
   segundoNombre,
@@ -69,12 +78,12 @@ export const obtenerFecha = (date1, date2) => {
 };
 
 export const obtenerNombre = () => {
-  const index = obtenerNumeroAleatorio(0, 100);
+  const index = obtenerNumeroAleatorio(0, cantNombres);
   return nombres[index];
 };
 
 export const obtenerApellido = () => {
-  const index = obtenerNumeroAleatorio(0, 45);
+  const index = obtenerNumeroAleatorio(0, cantApellidos);
   return apellidos[index];
 };
 
@@ -88,7 +97,7 @@ export const obtenerDireccion = () => {
 
 // PARA EL EMPLEADO
 export const obtenerRole = () => {
-  const index = obtenerNumeroAleatorio(0, 4);
+  const index = obtenerNumeroAleatorio(0, cantRoles);
   return roles[index];
 };
 
@@ -98,17 +107,17 @@ export const obtenerGenero = () => {
 };
 
 export const obtenerTipoContrato = () => {
-  const index = obtenerNumeroAleatorio(0, 5);
+  const index = obtenerNumeroAleatorio(0, cantTiposContratos);
   return tiposContratos[index];
 };
 
 export const obtenerNivelEducativo = () => {
-  const index = obtenerNumeroAleatorio(0, 7);
+  const index = obtenerNumeroAleatorio(0, cantNivelesAcademicos);
   return nivelesAcademicos[index];
 };
 
 export const obtenerDependencia = () => {
-  const index = obtenerNumeroAleatorio(0, 3);
+  const index = obtenerNumeroAleatorio(0, cantDependencias);
   return dependencias[index];
 };
 
@@ -117,13 +126,13 @@ export const obtenerFechaNacimiento = () => {
 };
 
 export const obtenerLugarNacimiento = () => {
-  const index = obtenerNumeroAleatorio(0, 7);
+  const index = obtenerNumeroAleatorio(0, cantCiudades);
   return ciudades[index];
 };
 
 //----------PROYECTO--------------***
 export const obtenerNombreProyecto = () => {
-  const index = obtenerNumeroAleatorio(0, 27);
+  const index = obtenerNumeroAleatorio(0, cantNombresProyectos);
   return nombreProyectos[index];
 };
 export const obtenerFechaInicio = () => {
